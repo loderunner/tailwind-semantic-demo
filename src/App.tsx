@@ -42,7 +42,7 @@ function App() {
   }, [scheme]);
   const Icon = useMemo(
     () => (scheme === "dark" ? MoonIcon : SunIcon),
-    [scheme]
+    [scheme],
   );
 
   return (
@@ -58,7 +58,7 @@ function App() {
           "dark:bg-neutral-500",
           "dark:text-neutral-40",
           "dark:hover:bg-neutral-40",
-          "dark:hover:text-neutral-500"
+          "dark:hover:text-neutral-500",
         )}
         onClick={() => setScheme(scheme === "light" ? "dark" : "light")}
       >
@@ -76,14 +76,20 @@ function App() {
           "rounded-card",
           "border",
           "border-card",
-          "dark:border-card-dark"
+          "dark:border-card-dark",
         )}
       >
-        <h1 className="text-4xl">Card with semantic color names</h1>
+        <h1 className="text-2xl">Card with semantic color names</h1>
       </div>
       <div className="card">
-        <h1 className="text-4xl">Card with custom component class</h1>
+        <h1 className="text-2xl">Card with custom component class</h1>
       </div>
+      <div className="card-from-plugin">
+        <h1 className="text-2xl">Card with class from plugin</h1>
+      </div>
+      <a className="card" href="https://circleci.com" target="_blank">
+        <h1 className="text-2xl">This card is a link</h1>
+      </a>
     </div>
   );
 }

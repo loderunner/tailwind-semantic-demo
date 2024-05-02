@@ -1,8 +1,10 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import thePlugin from "./plugin";
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{html,js,jsx,ts,tsx}"],
+  plugins: [thePlugin],
   darkMode: "selector",
   theme: {
     extend: {
@@ -27,10 +29,10 @@ export default {
         },
       },
       width: {
-        card: "640px",
+        card: "320px",
       },
       height: {
-        card: "300px",
+        card: "200px",
       },
       borderRadius: {
         card: defaultTheme.borderRadius.lg,

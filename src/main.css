@@ -4,8 +4,8 @@
 
 @layer components {
   .card {
-    width: 640px;
-    height: 300px;
+    width: 320px;
+    height: 200px;
 
     border-radius: theme("borderRadius.lg");
 
